@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Muli', sans-serif;
+}
+h1, h3 {
+    text-align: center;
+}
+.dataWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-start;
+    /* margin: auto; */
+}
+.card {
+    width: 80%;
+    margin: auto;
+    /* text-align: center; */
+}
