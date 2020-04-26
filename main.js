@@ -1,6 +1,21 @@
+const menuOpen = document.querySelector(".fa-bars");
+const menuClose = document.querySelector(".fa-window-close");
+
+menuOpen.addEventListener("click", ()=> {
+    console.log("menu active")
+    menuClose.classList.toggle("menuToggle");
+    menuOpen.classList.toggle("menuToggle");
+})
+
+menuClose.addEventListener("click", ()=> {
+    menuClose.classList.toggle("menuToggle");
+    menuOpen.classList.toggle("menuToggle");
+})
+//function to fetch data from the Covid19 Api
+//Data is dynamic and is subject to change as new data come in
 async function covidData() {
-    let response = await fetch('https://api.covid19api.com/summary');
-    let results = await response.json();
+    const response = await fetch('https://api.covid19api.com/summary');
+    const results = await response.json();
     const { Global, Countries } = results;
     console.log(Global);
     console.log(Countries);

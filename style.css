@@ -32,9 +32,10 @@ main {
     background-image: url("./images/world.png");
     background-repeat: repeat;
    /* background-position: center;*/
-    top: 98px;
+    top: 115px;
     z-index: 1;
     padding-bottom: 15px;
+    padding-top: 35px;
 }
 .navMenu {
     display: flex;
@@ -43,6 +44,13 @@ main {
 }
 .menuToggle {
     visibility: hidden; 
+}
+.menu {
+    position: relative;
+}
+i.far.fa-window-close {
+    position: absolute;
+    left: 0;
 }
 i.fas.fa-bars, i.far.fa-window-close{   
     font-size: 1.5rem;
@@ -59,4 +67,7 @@ i.fas.fa-bars, i.far.fa-window-close{
     padding: 18px 0;
     text-align: center;
     text-decoration: underline;
+}
+h3.dateTaken {
+    padding-bottom: 10px;
 }
