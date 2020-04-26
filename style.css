@@ -16,6 +16,7 @@ header {
       #fffdca 85%,
       #fffdcf 85%
     );
+    z-index: 2;
 }
 .dataWrapper {
     display: grid;
@@ -29,9 +30,11 @@ header {
 main {
     position: relative;
     background-image: url("./images/world.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
    /* background-position: center;*/
     top: 98px;
+    z-index: 1;
+    padding-bottom: 15px;
 }
 .navMenu {
     display: flex;
@@ -39,8 +42,21 @@ main {
     padding: 24px;
 }
 .menuToggle {
-   /* visibility: hidden; */
+    visibility: hidden; 
 }
 i.fas.fa-bars, i.far.fa-window-close{   
     font-size: 1.5rem;
+}
+.countryCard {
+    width: 340px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #ee7474;
+}
+.countryCard p {
+    padding: 18px 0;
+    text-align: center;
+    text-decoration: underline;
 }

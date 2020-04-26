@@ -6,16 +6,31 @@ async function covidData() {
     console.log(Countries);
     const timeExtracted = Countries[0].Date;
     console.log(timeExtracted)
-
-    let countryHolder = document.querySelector(".countryState");
-    let divCountry = document.createElement("div");
-    countryHolder.appendChild(divCountry);
+    const currentDateTime = timeExtracted.split("T");
+   console.log(currentDateTime);
+   const dateToday = currentDateTime[0];
+   const timeToday = currentDateTime[1].substring(0, currentDateTime[1].length - 1);
+   console.log(dateToday);
+   console.log(timeToday);
+    let countryHolder = document.querySelector(".countryState");   
+    
+    
     Countries.forEach(country => {
-        console.log(country.Country);
-        //create a child element to hold all countries   
+       // console.log(country.Country);
+        //create a child element to hold all countries 
+     let divCountry = document.createElement("div");  
+     countryHolder.appendChild(divCountry);   
     let para = document.createElement("p");
-    para.innerHTML = country.Country;
-    divCountry.appendChild(para)
+    let countryDetail = document.createElement("span");
+    divCountry.classList.add("countryCard")
+    para.innerHTML = `Country: ${country.Country}; `
+    countryDetail.innerHTML = `New Confirmed: ${country.NewConfirmed} <br/> 
+    New Death: ${country.NewDeaths} <br/> New Recovered: ${country.NewRecovered} <br/>    
+    Total Confirmed: ${country.TotalConfirmed} <br/>  
+    Total Deaths: ${country.TotalDeaths} <br/>
+    Total Recovered: ${country.TotalRecovered}`;
+    divCountry.appendChild(para);
+    divCountry.appendChild(countryDetail);
     });
 
     const newConfirmed = document.querySelector(".newConfirmed");
@@ -33,7 +48,7 @@ async function covidData() {
     totalConfirmedCases.innerHTML = Global.TotalConfirmed;
     totalDeath.innerHTML = Global.TotalDeaths;
     totalRecovered.innerHTML = Global.TotalRecovered;
-    dateLabel.innerHTML = timeExtracted;
+    dateLabel.innerHTML = `${dateToday}  ${timeToday}`; 
 
     
 
