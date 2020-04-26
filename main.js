@@ -1,15 +1,18 @@
 const menuOpen = document.querySelector(".fa-bars");
 const menuClose = document.querySelector(".fa-window-close");
+const modal = document.querySelector(".modal");
 
 menuOpen.addEventListener("click", ()=> {
     console.log("menu active")
     menuClose.classList.toggle("menuToggle");
     menuOpen.classList.toggle("menuToggle");
+    modal.classList.toggle("menuToggle");
 })
 
 menuClose.addEventListener("click", ()=> {
     menuClose.classList.toggle("menuToggle");
     menuOpen.classList.toggle("menuToggle");
+    modal.classList.toggle("menuToggle");
 })
 //function to fetch data from the Covid19 Api
 //Data is dynamic and is subject to change as new data come in
