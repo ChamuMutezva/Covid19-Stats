@@ -9,14 +9,38 @@ body {
 h1, h3 {
     text-align: center;
 }
+header {
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient( to right,#fffdc1,#fffdc4 15%, #fffdc9 15%,
+      #fffdca 85%,
+      #fffdcf 85%
+    );
+}
 .dataWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: flex-start;
-    /* margin: auto; */
+    justify-items: flex-start;    
 }
 .card {
     width: 80%;
-    margin: auto;
-    /* text-align: center; */
+    margin: auto;   
+}
+main {
+    position: relative;
+    background-image: url("./images/world.png");
+    background-repeat: no-repeat;
+   /* background-position: center;*/
+    top: 98px;
+}
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+.menuToggle {
+   /* visibility: hidden; */
+}
+i.fas.fa-bars, i.far.fa-window-close{   
+    font-size: 1.5rem;
 }
