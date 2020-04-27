@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Muli', sans-serif;
+}
+h1, h3 {
+    text-align: center;
+}
+header {
+    position: fixed;
+    width: 100%;
+  /*  background-image: linear-gradient( to right,#fffdc1,#fffdc4 15%, #fffdc9 15%,
+      #fffdca 85%,
+      #fffdcf 85%
+    );*/
+    z-index: 2;
+}
+.dataWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-start;    
+}
+.card {
+    width: 80%;
+    margin: auto;   
+}
+main {
+    position: relative;
+   /* background-image: url("./images/world.png");
+   background-image: linear-gradient(#f1e7ee, #d8c9d3, #a59ca2, #9f8295);
+    background-repeat: repeat;
+    background-position: center;*/
+    top: 115px;
+    z-index: 1;
+    padding-bottom: 15px;
+    padding-top: 50px;
+}
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+.menuToggle {
+    visibility: hidden; 
+}
+.menu {
+    position: relative;
+}
+i.far.fa-window-close {
+    position: absolute;
+    left: 0;
+}
+i.fas.fa-bars, i.far.fa-window-close{   
+    font-size: 1.5rem;
+}
+.countryCard {
+    width: 340px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #ee7474;
+}
+.countryCard p {
+    padding: 18px 0;
+    text-align: center;
+    text-decoration: underline;
+}
+h3.dateTaken {
+    padding-bottom: 10px;
+}
+
+.modal {
+    position: absolute;
+    width: 90%;
+}
+.modal ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    /* margin: auto; */
+    margin-top: 70px;
+    margin-left: 40px;
+    padding-bottom: 30px;
+    flex-direction: column;
+  /*  background-color:  #d8c9d3;*/
+    border-radius: 10px;
+}
+li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+li:hover {           
+        border-bottom: 2px solid black;   
+}
+
+.countryState {
+    display: flex;
+    flex-wrap: wrap;
+}
+header label {
+    text-align: center;
+    display: block;
+}
+countrySearch {
+    padding: 5px;
+}
+
+@media screen and (min-width: 580px) {
+    .modal ul {
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 8px 0;
+        margin-top: 18px;
+        margin-left: 100px;
+    background-color: transparent;
+    }
+    .modal {
+        visibility: visible;
+    }
+    .menu {
+        visibility: hidden;
+    }
+}
+
