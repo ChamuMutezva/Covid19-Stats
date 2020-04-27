@@ -108,5 +108,11 @@ li {
         margin-left: 100px;
     background-color: transparent;
     }
+    .modal {
+        visibility: visible;
+    }
+    .menu {
+        visibility: hidden;
+    }
 }
 

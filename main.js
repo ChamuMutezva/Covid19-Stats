@@ -20,16 +20,16 @@ async function covidData() {
     const response = await fetch('https://api.covid19api.com/summary');
     const results = await response.json();
     const { Global, Countries } = results;
-    console.log(Global);
-    console.log(Countries);
+   // console.log(Global);
+   // console.log(Countries);
     const timeExtracted = Countries[0].Date;
-    console.log(timeExtracted)
+   // console.log(timeExtracted)
     const currentDateTime = timeExtracted.split("T");
-   console.log(currentDateTime);
+  // console.log(currentDateTime);
    const dateToday = currentDateTime[0];
    const timeToday = currentDateTime[1].substring(0, currentDateTime[1].length - 1);
-   console.log(dateToday);
-   console.log(timeToday);
+  // console.log(dateToday);
+  // console.log(timeToday);
     let countryHolder = document.querySelector(".countryState");   
     
     
@@ -66,10 +66,16 @@ async function covidData() {
     totalConfirmedCases.innerHTML = Global.TotalConfirmed;
     totalDeath.innerHTML = Global.TotalDeaths;
     totalRecovered.innerHTML = Global.TotalRecovered;
-    dateLabel.innerHTML = `${dateToday}  ${timeToday}`; 
-
-    
+    dateLabel.innerHTML = `${dateToday}  ${timeToday}`;    
 
 }
 
 covidData();
+
+// api testing - not used in project
+async function testData () {
+    const response = await fetch("https://api.covid19api.com/countries");
+    const results = await response.json();
+console.log(results)
+}
+testData()
