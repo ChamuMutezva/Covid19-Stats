@@ -29,13 +29,14 @@ header {
 }
 main {
     position: relative;
-    background-image: url("./images/world.png");
+   /* background-image: url("./images/world.png");*/
+   background-image: linear-gradient(#f1e7ee, #d8c9d3, #a59ca2, #9f8295);
     background-repeat: repeat;
    /* background-position: center;*/
     top: 115px;
     z-index: 1;
     padding-bottom: 15px;
-    padding-top: 35px;
+    padding-top: 50px;
 }
 .navMenu {
     display: flex;
@@ -83,20 +84,30 @@ h3.dateTaken {
     padding-top: 30px;
     /* margin: auto; */
     margin-top: 70px;
-    margin-left: 50px;
+    margin-left: 40px;
     padding-bottom: 30px;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color:  #d8c9d3;
     border-radius: 10px;
 }
 li {
     list-style: none;
     margin-bottom: 20px;
 }
+li:hover {           
+        border-bottom: 2px solid black;   
+}
 
 .countryState {
     display: flex;
     flex-wrap: wrap;
+}
+header label {
+    text-align: center;
+    display: block;
+}
+countrySearch {
+    padding: 5px;
 }
 
 @media screen and (min-width: 580px) {
