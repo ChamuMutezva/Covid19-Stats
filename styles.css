@@ -62,10 +62,13 @@ i.fas.fa-bars, i.far.fa-window-close{
 .countryCard {
     width: 340px;
     margin: 20px auto;
-    padding: 10px;
-    border: 2px solid palevioletred;
-    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+   /* border: 2px solid palevioletred;
     box-shadow: 2px 2px 2px 2px #ee7474;
+   */
+    border-radius: 10px;
+   
 }
 .countryCard p {
     padding: 18px 0;
