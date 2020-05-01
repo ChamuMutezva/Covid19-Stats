@@ -5,7 +5,7 @@ const searchCountry = document.getElementById("countrySearch");
 
 console.log(searchCountry);
 
-
+//filter search by country
 searchCountry.addEventListener("keyup", (event) => {
     const allCountries = Array.from(document.querySelectorAll(".countryName"));
     console.log(event.key)
@@ -13,7 +13,7 @@ searchCountry.addEventListener("keyup", (event) => {
    
     allCountries.forEach(countrySelect => {
        const countries = countrySelect.innerHTML.toLowerCase();        
-        if(countries.includes(searchCountry.value)) {
+        if(countries.includes(searchCountry.value.toLowerCase())) {
             console.log(countrySelect.parentElement);
             console.log(countries);
             countrySelect.parentElement.style.display = "block";
