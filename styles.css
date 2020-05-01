@@ -6,6 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+a {
+    cursor: pointer;
+}
 body {
     font-family: 'Muli', sans-serif;
 }
@@ -14,12 +17,8 @@ h1, h3 {
 }
 header {
     position: fixed;
-    width: 100%;
-  /*  background-image: linear-gradient( to right,#fffdc1,#fffdc4 15%, #fffdc9 15%,
-      #fffdca 85%,
-      #fffdcf 85%
-    );*/
-    z-index: 2;
+    width: 100%; 
+    z-index: 3;
 }
 .dataWrapper {
     display: grid;
@@ -31,13 +30,9 @@ header {
     margin: auto;   
 }
 main {
-    position: relative;
-   /* background-image: url("./images/world.png");
-   background-image: linear-gradient(#f1e7ee, #d8c9d3, #a59ca2, #9f8295);
-    background-repeat: repeat;
-    background-position: center;*/
+    position: relative;  
     top: 180px;
-    z-index: 1;
+    z-index: 2;
     padding-bottom: 15px;
     padding-top: 50px;
 }
@@ -51,7 +46,9 @@ main {
 }
 .menu {
     position: relative;
+    top: 10px;
 }
+
 i.far.fa-window-close {
     position: absolute;
     left: 0;
@@ -64,11 +61,14 @@ i.fas.fa-bars, i.far.fa-window-close{
     margin: 20px auto;
     padding: 15px;
     background-color: white;
-   /* border: 2px solid palevioletred;
-    box-shadow: 2px 2px 2px 2px #ee7474;
-   */
-    border-radius: 10px;
-   
+   text-align: center;
+    border-radius: 10px;   
+}
+.countryName {
+    color: red;
+    font-weight: 800;
+    text-decoration: underline;
+    margin-bottom: 10px;
 }
 .countryCard p {
     padding: 18px 0;
@@ -114,7 +114,7 @@ li:hover {
 }
 header label {
     text-align: center;
-    display: block;
+    display: grid;
 }
 countrySearch {
     padding: 5px;
@@ -126,8 +126,21 @@ button.btn {
     padding: 7px;
     font-size: 1.3rem;
     margin: 15px 0;
-    border-radius: 5px;
-    /* margin-right: 13px; */
+    border-radius: 5px;  
+}
+.modalMyth{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;    
+}
+
+.dataError {
+    color: red;
+}
+
+.modalMythOpen {
+    z-index: 4;
 }
 
 @media screen and (min-width: 580px) {
@@ -144,6 +157,11 @@ button.btn {
     }
     .menu {
         visibility: hidden;
+    }
+    header label {        
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
     }
 }
 

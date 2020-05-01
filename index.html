@@ -14,9 +14,10 @@
     <header class="bg-blue-200">
         <div class="modal menuToggle">
             <ul class="bg-blue-800">
-                <li>Covid19</li>
-                <li>Preventive</li>
-                <li>Latest</li>
+                <li class="text-red-500 font-bold"><a>Covid19</a></li>
+                <li class="text-red-500 font-bold"><a>Preventive</a></li>
+                <li class="text-red-500 font-bold"><a>Latest</a></li>
+                <li class="text-red-500 font-bold myth"><a>Myth Busters</a></li>
             </ul>
         </div>
         <nav>
@@ -29,9 +30,9 @@
             </div>
         </nav>
         <div>
-            <label for="countrySearch"> Search by country
+            <label for="countrySearch" class="searchBy"><span> Search by country</span>
                 <input type="search" placeholder="Zimbabwe" name="" id="countrySearch"
-                 class="m-4 p-2 text-center text-lg text-blue-530">
+                 class="m-4 p-2 text-center text-lg text-blue-500">
             </label>
             <h3 class="dateTaken">Data extracted at </h3>
         </div>
@@ -46,7 +47,7 @@
                 <h4 class="newConfirmed"></h4>
             </div>
 
-            <div class="bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">New Deaths
+            <div class="text-red-700 font-bold bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">New Deaths
                 <label></label>
                 <h4 class="newDeath"></h4>
             </div>
@@ -61,7 +62,7 @@
                 <h4 class="totalConfirmed"></h4>
             </div>
 
-            <div class="bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">Total Deaths
+            <div class="text-red-700 font-bold bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">Total Deaths
                 <label></label>
                 <h4 class="totalDeath"></h4>
             </div>
@@ -77,6 +78,10 @@
 
         </div>
     </main>
+    <div class="modalMyth">
+        <img src="images/24.png" alt="" srcset="">
+
+    </div>
     <script src="main.js"></script>
 </body>
 

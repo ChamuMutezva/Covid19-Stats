@@ -3,7 +3,15 @@ const menuClose = document.querySelector(".fa-window-close");
 const modal = document.querySelector(".modal");
 const searchCountry = document.getElementById("countrySearch");
 
-console.log(searchCountry);
+const modalMyth = document.querySelector(".modalMyth") //Select myth modal
+const mythLink = document.querySelector(".myth");
+mythLink.addEventListener("click" , () => {
+    console.log("myth clicked");
+   // modalMyth.classList.add("modalMythOpen");
+})
+
+
+console.log(modalMyth);
 
 //filter search by country
 searchCountry.addEventListener("keyup", (event) => {
@@ -39,6 +47,7 @@ menuClose.addEventListener("click", () => {
 //function to fetch data from the Covid19 Api
 //Data is dynamic and is subject to change as new data come in
 async function covidData() {
+    try {    
     const response = await fetch('https://api.covid19api.com/summary');
     const results = await response.json();
     const { Global, Countries } = results;
@@ -75,11 +84,11 @@ async function covidData() {
         divCountry.classList.add("countryCard")
 
         countryName.innerHTML = `${country.Country} `
-        countryDetail.innerHTML = `New Confirmed: ${country.NewConfirmed} <br/> 
-    New Death: ${country.NewDeaths} <br/> New Recovered: ${country.NewRecovered} <br/>    
-    Total Confirmed: ${country.TotalConfirmed} <br/>  
-    Total Deaths: ${country.TotalDeaths} <br/>
-    Total Recovered: ${country.TotalRecovered}`;
+        countryDetail.innerHTML = `New Confirmed: ${country.NewConfirmed.toLocaleString()} <br/> 
+    New Death: ${country.NewDeaths.toLocaleString()} <br/> New Recovered: ${country.NewRecovered} <br/>    
+    Total Confirmed: ${country.TotalConfirmed.toLocaleString()} <br/>  
+    Total Deaths: ${country.TotalDeaths.toLocaleString()} <br/>
+    Total Recovered: ${country.TotalRecovered.toLocaleString()}`;
 
         //add children to parent
         divCountry.appendChild(countryName);
@@ -97,14 +106,21 @@ async function covidData() {
     const dateLabel = document.querySelector(".dateTaken");
 
 
-    newConfirmed.innerHTML = Global.NewConfirmed;
-    newDeath.innerHTML = Global.NewDeaths;
-    newRecovered.innerHTML = Global.NewRecovered;
-    totalConfirmedCases.innerHTML = Global.TotalConfirmed;
-    totalDeath.innerHTML = Global.TotalDeaths;
-    totalRecovered.innerHTML = Global.TotalRecovered;
-    dateLabel.innerHTML = `${dateToday}  ${timeToday}`;
-
+    newConfirmed.innerHTML = Global.NewConfirmed.toLocaleString();
+    newDeath.innerHTML = Global.NewDeaths.toLocaleString();
+    newRecovered.innerHTML = Global.NewRecovered.toLocaleString();
+    totalConfirmedCases.innerHTML = Global.TotalConfirmed.toLocaleString();
+    totalDeath.innerHTML = Global.TotalDeaths.toLocaleString();
+    totalRecovered.innerHTML = Global.TotalRecovered.toLocaleString();
+    console.log(dateToday)
+    dateLabel.innerHTML = `Data captured at: ${dateToday}  ${timeToday}`;
+    } catch(err) {
+        const dateLabel = document.querySelector(".dateTaken");
+        dateLabel.classList.add("dataError");
+       // alert(err)
+        dateLabel.innerHTML = `Error: ${err} <br/>
+        Data can only be fetched online`
+    }
 }
 
 covidData();
