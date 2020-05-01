@@ -13,7 +13,7 @@ searchCountry.addEventListener("keyup", (event) => {
    
     allCountries.forEach(countrySelect => {
        const countries = countrySelect.innerHTML.toLowerCase();        
-        if(countries.includes(searchCountry.value.toLowerCase())) {
+        if(countries.includes(searchCountry.value.toLowerCase().trim())) {
             console.log(countrySelect.parentElement);
             console.log(countries);
             countrySelect.parentElement.style.display = "block";
