@@ -1,6 +1,28 @@
 const menuOpen = document.querySelector(".fa-bars");
 const menuClose = document.querySelector(".fa-window-close");
 const modal = document.querySelector(".modal");
+const searchCountry = document.getElementById("countrySearch");
+
+console.log(searchCountry);
+
+
+searchCountry.addEventListener("keyup", (event) => {
+    const allCountries = Array.from(document.querySelectorAll(".countryName"));
+    console.log(event.key)
+    console.log(searchCountry.value)
+   
+    allCountries.forEach(countrySelect => {
+       const countries = countrySelect.innerHTML.toLowerCase();        
+        if(countries.includes(searchCountry.value)) {
+            console.log(countrySelect.parentElement);
+            console.log(countries);
+            countrySelect.parentElement.style.display = "block";
+        } else {
+            countrySelect.parentElement.style.display = "none";
+        }
+    })
+
+})
 
 menuOpen.addEventListener("click", ()=> {
     console.log("menu active")
@@ -38,16 +60,17 @@ async function covidData() {
         //create a child element to hold all countries 
      let divCountry = document.createElement("div");  
      countryHolder.appendChild(divCountry);   
-    let para = document.createElement("p");
+    let countryName = document.createElement("h3");
+    countryName.classList.add("countryName");
     let countryDetail = document.createElement("span");
     divCountry.classList.add("countryCard")
-    para.innerHTML = `Country: ${country.Country}; `
+    countryName.innerHTML = `${country.Country} `
     countryDetail.innerHTML = `New Confirmed: ${country.NewConfirmed} <br/> 
     New Death: ${country.NewDeaths} <br/> New Recovered: ${country.NewRecovered} <br/>    
     Total Confirmed: ${country.TotalConfirmed} <br/>  
     Total Deaths: ${country.TotalDeaths} <br/>
     Total Recovered: ${country.TotalRecovered}`;
-    divCountry.appendChild(para);
+    divCountry.appendChild(countryName);
     divCountry.appendChild(countryDetail);
     });
 
