@@ -14988,7 +14988,7 @@ header {
 
 .dataWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: flex-start;
 }
 
@@ -15003,7 +15003,7 @@ main {
    background-image: linear-gradient(#f1e7ee, #d8c9d3, #a59ca2, #9f8295);
     background-repeat: repeat;
     background-position: center;*/
-  top: 115px;
+  top: 180px;
   z-index: 1;
   padding-bottom: 15px;
   padding-top: 50px;
@@ -15053,6 +15053,11 @@ h3.dateTaken {
   padding-bottom: 10px;
 }
 
+.dataWrapper .card {
+  width: 90%;
+  margin: 10px auto;
+}
+
 .modal {
   position: absolute;
   width: 90%;
@@ -15093,6 +15098,17 @@ header label {
 
 countrySearch {
   padding: 5px;
+}
+
+button.btn {
+  display: block;
+  background: #73b9d6;
+  width: 120px;
+  padding: 7px;
+  font-size: 1.3rem;
+  margin: 15px 0;
+  border-radius: 5px;
+  /* margin-right: 13px; */
 }
 
 @media screen and (min-width: 580px) {
