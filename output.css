@@ -15050,6 +15050,10 @@ i.fas.fa-bars, i.far.fa-window-close{
   text-decoration: underline;
 }
 
+.countryCard span {
+  color: green
+}
+
 h3.dateTaken {
   padding-bottom: 10px;
 }
@@ -15111,11 +15115,22 @@ button.btn {
   border-radius: 5px;
 }
 
+section {
+  margin-top: 180px;
+}
+
 .modalMyth{
-  position: absolute;
-  top: 200px;
-  left: 0;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modalMyth img {
+  width: 340px;
+  margin: 20px auto;
+  /* padding: 15px;
+        background-color: white;
+        text-align: center;
+        border-radius: 10px;*/
 }
 
 .dataError {
@@ -15123,7 +15138,8 @@ button.btn {
 }
 
 .modalMythOpen {
-  z-index: 4;
+  /*z-index: 4;
+    visibility: visible;*/
 }
 
 @media screen and (min-width: 580px) {

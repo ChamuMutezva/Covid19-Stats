@@ -5,11 +5,15 @@ const searchCountry = document.getElementById("countrySearch");
 
 const modalMyth = document.querySelector(".modalMyth") //Select myth modal
 const mythLink = document.querySelector(".myth");
+/*
 mythLink.addEventListener("click" , () => {
     console.log("myth clicked");
-   // modalMyth.classList.add("modalMythOpen");
+ modalMyth.classList.add("modalMythOpen");
+ menuClose.classList.toggle("menuToggle");
+ menuOpen.classList.toggle("menuToggle");
+ modal.classList.toggle("menuToggle");
 })
-
+*/
 
 console.log(modalMyth);
 
