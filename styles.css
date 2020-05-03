@@ -125,10 +125,10 @@ countrySearch {
 button.btn {
     display: block;
     background: #73b9d6;
-    width: 120px;
+    width: 160px;
     padding: 7px;
     font-size: 1.3rem;
-    margin: 15px 0;
+    margin: 15px auto;
     border-radius: 5px;  
 }
 section {
