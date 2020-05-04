@@ -15145,7 +15145,7 @@ section {
   .modal ul {
     justify-content: space-around;
     flex-direction: row;
-    padding: 8px 0;
+    /* padding: 8px 0;*/
     margin-top: 18px;
     margin-left: 100px;
     background-color: transparent;
@@ -15162,7 +15162,15 @@ section {
   header label {
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-items: center;
+    /*justify-items: center;*/
+  }
+
+  .countryLabel {
+    justify-self: end;
+  }
+
+  #countrySearch {
+    justify-self: start;
   }
 }
 
