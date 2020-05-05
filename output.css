@@ -15141,6 +15141,19 @@ section {
   display: block;
 }
 
+/*about page styling  */
+
+.description {
+  width: 90%;
+  margin: auto;
+}
+
+.description p {
+  padding-left: 30px;
+}
+
+/* end about page styling */
+
 @media screen and (min-width: 580px) {
   .modal ul {
     justify-content: space-around;
@@ -15171,6 +15184,20 @@ section {
 
   #countrySearch {
     justify-self: start;
+  }
+
+  .description {
+    width: 80%;
+  }
+
+  .description p {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .description {
+    width: 60%;
   }
 }
 
