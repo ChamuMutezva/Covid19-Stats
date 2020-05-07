@@ -2,6 +2,7 @@ const menuOpen = document.querySelector(".fa-bars");
 const menuClose = document.querySelector(".fa-window-close");
 const modal = document.querySelector(".modal");
 const searchCountry = document.getElementById("countrySearch");
+const body = document.querySelector("body");
 
 const modalMyth = document.querySelector(".modalMyth") //Select myth modal
 const mythLink = document.querySelector(".myth");
@@ -101,9 +102,16 @@ async function covidData() {
 
             //add eventlistener to button
             btn.addEventListener("click", (evt) => {
+                const modalCountry = document.querySelector(".modalCountry");
+                const countryName = document.querySelector(".modalCountry h1")
+                countryName.innerHTML =     `${country.Country}`
+                console.log(modalCountry)
+                modalCountry.classList.add("modalCountryOpen");
+                body.style.overflow = "hidden"
+              //  body.classList.add(".toggleOverflow");
                 console.log(`button clicked is ${country.Country}`);
-                alert(`${country.Country} information will 
-            be implemented soon!`);
+                //alert(`${country.Country} information will 
+            //be implemented soon!`);
             })
 
         });
@@ -129,8 +137,8 @@ async function covidData() {
         const dateLabel = document.querySelector(".dateTaken");
         dateLabel.classList.add("dataError");
         // alert(err)
-        dateLabel.innerHTML = `Error: ${err} <br/>
-        Data can only be fetched online`
+        dateLabel.innerHTML = ` Error:
+        Data can only be fetched online <br/>  ${err} `
     }
 }
 

@@ -14976,6 +14976,10 @@ body {
   font-family: 'Muli', sans-serif;
 }
 
+.toggleOverflow {
+  overflow: hidden;
+}
+
 h1, h3 {
   text-align: center;
 }
@@ -15150,6 +15154,24 @@ section {
 
 .description p {
   padding-left: 30px;
+}
+
+.modalCountry {
+  position: absolute;
+  top: 50px;
+  visibility: hidden;
+  width: 80%;
+  background-color: white;
+  margin: auto;
+  left: 10%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.modalCountryOpen {
+  visibility: visible;
 }
 
 /* end about page styling */

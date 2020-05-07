@@ -30,16 +30,37 @@
             </div>
         </nav>
         <div>
-            <label for="countrySearch" class="searchBy"><span class="countryLabel">Search by country</span>               
-                   <input type="search" placeholder="Zimbabwe" name="" id="countrySearch"
-                 class="m-4 p-2 text-center text-lg text-blue-500">                 
+            <label for="countrySearch" class="searchBy"><span class="countryLabel">Search by country</span>
+                <input type="search" placeholder="Zimbabwe" name="" id="countrySearch"
+                    class="m-4 p-2 text-center text-lg text-blue-500">
             </label>
             <h3 class="dateTaken">Data extracted at </h3>
         </div>
-        
+
+        <div class="modalCountry">
+            <h1>Country: </h1>
+            <h2>Region: </h2>
+            <p>
+                Total Confirmed Cases: <br>
+                New Confirmed cases:
+            </p>
+
+            <p>
+                Total Deaths Cases: <br>
+                New Deaths cases:
+            </p>
+            <p>
+                Total Recovered Cases: <br>
+                New Recovered cases:
+            </p>
+            <button class="btnTop bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Back
+            </button>
+        </div>
+
     </header>
     <main class="bg-blue-500" id="topSection">
-        <h1 class="text-xl text-purple-900 font-bold">Covid19 Statistics 2020</h1>        
+        <h1 class="text-xl text-purple-900 font-bold">Covid19 Statistics 2020</h1>
         <h3 class="font-bold text-xl text-red-200">Current Global Statistics</h3>
         <div class="dataWrapper bg-blue-710">
             <div class="bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">
@@ -69,17 +90,17 @@
 
             <div class="bg-blue-600 hover:bg-700-blue text-center p-2 card rounded">
                 <label></label>
-                Total Recovered 
+                Total Recovered
                 <h4 class="totalRecovered"></h4>
             </div>
         </div>
         <h3 class="text-center text-xl font-bold font-awesome">Country by country Statistics</h3>
-        <div class="countryState">            
-
+        <div class="countryState">
 
         </div>
+
     </main>
-   
+
     <script src="main.js"></script>
 </body>
 
