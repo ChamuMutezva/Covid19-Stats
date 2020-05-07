@@ -112,6 +112,8 @@ async function covidData() {
                 console.log(`button clicked is ${country.Country}`);
                 //alert(`${country.Country} information will 
             //be implemented soon!`);
+
+            
             })
 
         });
@@ -141,6 +143,15 @@ async function covidData() {
         Data can only be fetched online <br/>  ${err} `
     }
 }
+
+ //close the modal button steps
+ const btnModal = document.querySelector(".modalCountry button");
+ console.log(btnModal)
+ btnModal.addEventListener("click", ()=> {
+    const modalCountry = document.querySelector(".modalCountry");
+    body.style.overflow = "visible";
+    modalCountry.classList.remove("modalCountryOpen");
+ })
 
 covidData();
 
