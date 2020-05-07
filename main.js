@@ -104,16 +104,36 @@ async function covidData() {
             btn.addEventListener("click", (evt) => {
                 const modalCountry = document.querySelector(".modalCountry");
                 const countryName = document.querySelector(".modalCountry h1")
-                countryName.innerHTML =     `${country.Country}`
+                countryName.innerHTML = `${country.Country}`
                 console.log(modalCountry)
                 modalCountry.classList.add("modalCountryOpen");
                 body.style.overflow = "hidden"
-              //  body.classList.add(".toggleOverflow");
+                //  body.classList.add(".toggleOverflow");
                 console.log(`button clicked is ${country.Country}`);
                 //alert(`${country.Country} information will 
-            //be implemented soon!`);
+                //be implemented soon!`);
 
-            
+                //add data to modal dialog box
+                const totalConfirmedCases = document.querySelector(".totalConfirmedCases");
+             // totalConfirmedCases data;
+                totalConfirmedCases.innerHTML = `Total Confirmed Cases: ${country.TotalConfirmed.toLocaleString()}`;
+
+           //new confirmed cases
+           const newConfirmedCases = document.querySelector(".newConfirmedCases");
+           newConfirmedCases.innerHTML = `New Confirmed Cases: ${country.NewConfirmed.toLocaleString()}`;
+
+           const totalDeath = document.querySelector(".totalDeathsCases");
+           totalDeath.innerHTML = `Total Death Cases: ${country.TotalDeaths.toLocaleString()}`;
+
+           const newDeath = document.querySelector(".newDeathsCases");
+           newDeath.innerHTML = `New Death Cases: ${country.NewDeaths.toLocaleString()}`
+
+           const totalRecovered = document.querySelector(".totalRecoveredCases");
+           totalRecovered.innerHTML = `Total Recovered Cases: ${country.TotalRecovered.toLocaleString()}`
+
+           const newRecovered = document.querySelector(".newRecoveredCases");
+           newRecovered.innerHTML = `New Death Cases: ${country.NewRecovered.toLocaleString()}`
+           
             })
 
         });
@@ -144,14 +164,16 @@ async function covidData() {
     }
 }
 
- //close the modal button steps
- const btnModal = document.querySelector(".modalCountry button");
- console.log(btnModal)
- btnModal.addEventListener("click", ()=> {
+//close the modal button steps
+const btnModal = document.querySelector(".modalCountry button");
+console.log(btnModal)
+btnModal.addEventListener("click", () => {
     const modalCountry = document.querySelector(".modalCountry");
     body.style.overflow = "visible";
     modalCountry.classList.remove("modalCountryOpen");
- })
+
+
+})
 
 covidData();
 
