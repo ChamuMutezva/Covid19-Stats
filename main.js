@@ -57,7 +57,7 @@ async function covidData() {
         const results = await response.json();
         const { Global, Countries } = results;
         // console.log(Global);
-        // console.log(Countries);
+        console.log(Countries);
         const timeExtracted = Countries[0].Date;
         // console.log(timeExtracted)
         const currentDateTime = timeExtracted.split("T");
@@ -115,25 +115,25 @@ async function covidData() {
 
                 //add data to modal dialog box
                 const totalConfirmedCases = document.querySelector(".totalConfirmedCases");
-             // totalConfirmedCases data;
+                // totalConfirmedCases data;
                 totalConfirmedCases.innerHTML = `Total Confirmed Cases: ${country.TotalConfirmed.toLocaleString()}`;
 
-           //new confirmed cases
-           const newConfirmedCases = document.querySelector(".newConfirmedCases");
-           newConfirmedCases.innerHTML = `New Confirmed Cases: ${country.NewConfirmed.toLocaleString()}`;
+                //new confirmed cases
+                const newConfirmedCases = document.querySelector(".newConfirmedCases");
+                newConfirmedCases.innerHTML = `New Confirmed Cases: ${country.NewConfirmed.toLocaleString()}`;
 
-           const totalDeath = document.querySelector(".totalDeathsCases");
-           totalDeath.innerHTML = `Total Death Cases: ${country.TotalDeaths.toLocaleString()}`;
+                const totalDeath = document.querySelector(".totalDeathsCases");
+                totalDeath.innerHTML = `Total Death Cases: ${country.TotalDeaths.toLocaleString()}`;
 
-           const newDeath = document.querySelector(".newDeathsCases");
-           newDeath.innerHTML = `New Death Cases: ${country.NewDeaths.toLocaleString()}`
+                const newDeath = document.querySelector(".newDeathsCases");
+                newDeath.innerHTML = `New Death Cases: ${country.NewDeaths.toLocaleString()}`
 
-           const totalRecovered = document.querySelector(".totalRecoveredCases");
-           totalRecovered.innerHTML = `Total Recovered Cases: ${country.TotalRecovered.toLocaleString()}`
+                const totalRecovered = document.querySelector(".totalRecoveredCases");
+                totalRecovered.innerHTML = `Total Recovered Cases: ${country.TotalRecovered.toLocaleString()}`
 
-           const newRecovered = document.querySelector(".newRecoveredCases");
-           newRecovered.innerHTML = `New Death Cases: ${country.NewRecovered.toLocaleString()}`
-           
+                const newRecovered = document.querySelector(".newRecoveredCases");
+                newRecovered.innerHTML = `New Recovered Cases: ${country.NewRecovered.toLocaleString()}`
+
             })
 
         });
