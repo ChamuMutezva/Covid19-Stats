@@ -15161,10 +15161,9 @@ section {
   top: 50px;
   visibility: hidden;
   width: 80%;
-  background-color: white;
+  background-color:#2673a2 ;
   margin: auto;
   left: 10%;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   row-gap: 30px;

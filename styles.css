@@ -176,10 +176,10 @@ top: -40px;
     top: 50px;
     visibility: hidden;
     width: 80%;
-    background-color: white;
+   
     margin: auto;
     left: 10%;
-    padding: 10px;
+   
     display: flex;
     flex-direction: column;
     row-gap: 30px;
