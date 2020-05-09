@@ -126,8 +126,12 @@ header label {
     text-align: center;
     display: grid;
 }
-countrySearch {
-    padding: 5px;
+#countrySearch {
+    margin: auto;
+}
+.countryLabel {
+    display: block;
+    text-align: center;
 }
 button.btn {
     display: block;
@@ -222,11 +226,16 @@ details[open] ~ * {
         align-items: center;
         /*justify-items: center;*/
     }
+    label.searchBy {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
     .countryLabel {
-        justify-self: end;
+        margin-right: 5px;
     }
     #countrySearch {
-        justify-self: start;
+        margin: 0;
     }
     .description {
         width: 80%;       

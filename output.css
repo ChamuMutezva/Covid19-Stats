@@ -15009,7 +15009,7 @@ header {
 
 main {
   position: relative;
-  top: 180px;
+  top: 90px;
   z-index: 2;
   padding-bottom: 15px;
   padding-top: 50px;
@@ -15112,8 +15112,13 @@ header label {
   display: grid;
 }
 
-countrySearch {
-  padding: 5px;
+#countrySearch {
+  margin: auto;
+}
+
+.countryLabel {
+  display: block;
+  text-align: center;
 }
 
 button.btn {
@@ -15218,12 +15223,18 @@ details[open] ~ * {
     /*justify-items: center;*/
   }
 
+  label.searchBy {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
   .countryLabel {
-    justify-self: end;
+    margin-right: 5px;
   }
 
   #countrySearch {
-    justify-self: start;
+    margin: 0;
   }
 
   .description {
