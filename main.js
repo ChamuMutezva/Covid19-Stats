@@ -78,6 +78,7 @@ async function covidData() {
 
             const btn = document.createElement("button");
             btn.classList.add("btn");
+           // modalCountry.classList.remove('animate__animated', 'animate__fadeOut');
             btn.innerHTML = "Read more...";
 
             countryHolder.appendChild(divCountry);
@@ -171,6 +172,7 @@ btnModal.addEventListener("click", () => {
     const modalCountry = document.querySelector(".modalCountry");
     body.style.overflow = "visible";
     modalCountry.classList.remove("modalCountryOpen");
+   // modalCountry.classList.add('animate__animated', 'animate__fadeOut');
 
 
 })

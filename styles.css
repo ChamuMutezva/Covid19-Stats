@@ -18,6 +18,10 @@ body {
 h1, h3 {
     text-align: center;
 }
+h1:hover {
+    animation: bounce;
+    animation-duration: 2s;
+}
 header {
     position: fixed;
     width: 100%; 
@@ -187,8 +191,16 @@ top: -40px;
 
 .modalCountryOpen {
     visibility: visible;
+    animation: fadeIn;
+    animation-duration: 2s;
 }
 /* end about page styling */
+
+/*summary animation */
+details[open] ~ * {
+  animation: fadeIn;
+  animation-duration: 2s;
+}
 
 @media screen and (min-width: 580px) {
     .modal ul {

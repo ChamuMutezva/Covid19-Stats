@@ -14984,6 +14984,13 @@ h1, h3 {
   text-align: center;
 }
 
+h1:hover {
+  -webkit-animation: bounce;
+          animation: bounce;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -15161,7 +15168,6 @@ section {
   top: 50px;
   visibility: hidden;
   width: 80%;
-  background-color:#2673a2 ;
   margin: auto;
   left: 10%;
   display: flex;
@@ -15171,9 +15177,22 @@ section {
 
 .modalCountryOpen {
   visibility: visible;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 /* end about page styling */
+
+/*summary animation */
+
+details[open] ~ * {
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
 
 @media screen and (min-width: 580px) {
   .modal ul {
