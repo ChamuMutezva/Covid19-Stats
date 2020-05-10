@@ -15077,6 +15077,10 @@ h3.dateTaken {
 .modal {
   position: absolute;
   width: 90%;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 .modal ul {
@@ -15102,7 +15106,7 @@ li:hover {
   border-bottom: 2px solid black;
 }
 
-.mythSectionLI li:hover {
+.backToMain li:hover {
   border-bottom: none;
 }
 

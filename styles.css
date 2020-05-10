@@ -96,6 +96,8 @@ h3.dateTaken {
 .modal {
     position: absolute;
     width: 90%;
+    animation: fadeIn;
+    animation-duration: 4s;
 }
 .modal ul {
     display: flex;
