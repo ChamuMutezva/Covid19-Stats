@@ -15102,6 +15102,10 @@ li:hover {
   border-bottom: 2px solid black;
 }
 
+.mythSectionLI li:hover {
+  border-bottom: none;
+}
+
 .countryState {
   display: flex;
   flex-wrap: wrap;

@@ -117,6 +117,9 @@ li {
 li:hover {           
         border-bottom: 2px solid black;   
 }
+.backToMain li:hover {
+    border-bottom: none;
+}
 
 .countryState {
     display: flex;
