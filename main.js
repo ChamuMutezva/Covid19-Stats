@@ -15,6 +15,17 @@ mythLink.addEventListener("click" , () => {
  modal.classList.toggle("menuToggle");
 })
 */
+//map data
+async function getMapsData() {
+    const response = await fetch('https://restcountries.eu/rest/v2/all');
+    const results = await response.json();
+  //const  [flag , region , name] = results;
+    console.log(results)
+}
+
+getMapsData();
+
+
 
 console.log(modalMyth);
 
@@ -54,9 +65,10 @@ menuClose.addEventListener("click", () => {
 async function covidData() {
     try {
         const response = await fetch('https://api.covid19api.com/summary');
+      //  const responseMap = await fetch('https://restcountries.eu/rest/v2/all'); //fetch map
+       // const resultsMap = await responseMap.json(); //get map data
         const results = await response.json();
-        const { Global, Countries } = results;
-        // console.log(Global);
+        const { Global, Countries } = results;        
         console.log(Countries);
         const timeExtracted = Countries[0].Date;
         // console.log(timeExtracted)
@@ -179,10 +191,10 @@ btnModal.addEventListener("click", () => {
 
 covidData();
 
-// api testing - not used in project
+/* api testing - not used in project
 async function testData() {
     const response = await fetch("https://api.covid19api.com/countries");
     const results = await response.json();
     console.log(results)
 }
-testData()
+testData() */
