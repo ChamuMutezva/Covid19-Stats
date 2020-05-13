@@ -116,7 +116,8 @@ async function covidData() {
             //add eventlistener to button
             btn.addEventListener("click", (evt) => {
                 const modalCountry = document.querySelector(".modalCountry");
-                const countryName = document.querySelector(".modalCountry h1")
+                const countryName = document.querySelector(".modalCountry h1");
+               
                 countryName.innerHTML = `${country.Country}`
                 console.log(modalCountry)
                 modalCountry.classList.add("modalCountryOpen");
@@ -146,6 +147,8 @@ async function covidData() {
 
                 const newRecovered = document.querySelector(".newRecoveredCases");
                 newRecovered.innerHTML = `New Recovered Cases: ${country.NewRecovered.toLocaleString()}`
+
+                getMapsData(country.Country);
 
             })
 
@@ -205,15 +208,30 @@ async function testData() {
 testData() */
 
 //map data
-async function getMapsData() {
+async function getMapsData(cty) {
+    const regionContinent = document.querySelector(".region");
+    const capitalCity = document.querySelector(".capitalCity");
+    const countryPopulation = document.querySelector(".countryPopulation");
+    console.log(cty);
     const response = await fetch('https://restcountries.eu/rest/v2/all');
     const results = await response.json();
+    const modalCountryOpen = document.querySelector(".modalCountryOpen");
+    const countryFlag = document.querySelector(".countryFlag")
+    console.log(modalCountryOpen)
     results.forEach(country => {
-        console.log(country)
+      //  console.log(country)
         const {name, population, region, capital, flag} = country
-        console.log(name, flag)
+      //  console.log(name, flag)
+      if (cty == name) {
+          console.log(region);
+          console.log(name, capital);
+          regionContinent.innerHTML = `Region : ${region}`;
+          capitalCity.innerHTML = `Capital : ${capital}`;
+          countryPopulation.innerHTML = `Population : ${population.toLocaleString()}`
+          countryFlag.src = `${flag}`;
+      }
     }) 
 }
 
-getMapsData();
+
 
