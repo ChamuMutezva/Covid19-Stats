@@ -15,16 +15,17 @@ mythLink.addEventListener("click" , () => {
  modal.classList.toggle("menuToggle");
 })
 */
-//map data
+
+/*map data
 async function getMapsData() {
     const response = await fetch('https://restcountries.eu/rest/v2/all');
     const results = await response.json();
-  //const  [flag , region , name] = results;
+    const  [flag , region , name] = results;
     console.log(results)
 }
 
 getMapsData();
-
+*/
 
 
 console.log(modalMyth);
@@ -65,10 +66,16 @@ menuClose.addEventListener("click", () => {
 async function covidData() {
     try {
         const response = await fetch('https://api.covid19api.com/summary');
-      //  const responseMap = await fetch('https://restcountries.eu/rest/v2/all'); //fetch map
-       // const resultsMap = await responseMap.json(); //get map data
+
+        // restcountries map details - start 
+        const responseMap = await fetch('https://restcountries.eu/rest/v2/all'); //fetch map
+        const resultsMap = await responseMap.json(); //get map data
+        const [name, flag] = resultsMap;
+        console.log(name);
+
+
         const results = await response.json();
-        const { Global, Countries } = results;        
+        const { Global, Countries } = results;
         console.log(Countries);
         const timeExtracted = Countries[0].Date;
         // console.log(timeExtracted)
@@ -90,7 +97,7 @@ async function covidData() {
 
             const btn = document.createElement("button");
             btn.classList.add("btn");
-           // modalCountry.classList.remove('animate__animated', 'animate__fadeOut');
+            // modalCountry.classList.remove('animate__animated', 'animate__fadeOut');
             btn.innerHTML = "Read more...";
 
             countryHolder.appendChild(divCountry);
@@ -103,10 +110,11 @@ async function covidData() {
 
             countryName.innerHTML = `${country.Country} `
             countryDetail.innerHTML = `New Confirmed: ${country.NewConfirmed.toLocaleString()} <br/> 
-    New Death: ${country.NewDeaths.toLocaleString()} <br/> New Recovered: ${country.NewRecovered} <br/>    
-    Total Confirmed: ${country.TotalConfirmed.toLocaleString()} <br/>  
-    Total Deaths: ${country.TotalDeaths.toLocaleString()} <br/>
-    Total Recovered: ${country.TotalRecovered.toLocaleString()}`;
+                                        New Death: ${country.NewDeaths.toLocaleString()} <br/>
+                                        New Recovered: ${country.NewRecovered} <br/>    
+                                        Total Confirmed: ${country.TotalConfirmed.toLocaleString()} <br/>  
+                                        Total Deaths: ${country.TotalDeaths.toLocaleString()} <br/>
+                                        Total Recovered: ${country.TotalRecovered.toLocaleString()}`;
 
             //add children to parent
             divCountry.appendChild(countryName);
@@ -184,7 +192,7 @@ btnModal.addEventListener("click", () => {
     const modalCountry = document.querySelector(".modalCountry");
     body.style.overflow = "visible";
     modalCountry.classList.remove("modalCountryOpen");
-   // modalCountry.classList.add('animate__animated', 'animate__fadeOut');
+    // modalCountry.classList.add('animate__animated', 'animate__fadeOut');
 
 
 })
