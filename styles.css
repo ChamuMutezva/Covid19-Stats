@@ -211,6 +211,21 @@ details[open] ~ * {
   animation-duration: 2s;
 }
 
+.countryFacts {
+    display: flex;
+}
+.countryFacts1 {
+    text-align: left;
+}
+.countryFacts1 h1{
+    text-align: left;
+}
+img.countryFlag {
+    height: 70px;
+    display: block;
+    margin: auto;
+}
+
 @media screen and (min-width: 580px) {
     .modal ul {
         justify-content: space-around;
@@ -251,8 +266,21 @@ details[open] ~ * {
 }
 
 @media screen and (min-width: 980px) {
+    .facts {
+        display: flex;
+    }
     .description {
         width: 60%;       
+    }
+    .countryFacts {       
+        flex-direction: column;
+        width: 60%;
+    }
+    .caseStatistics {
+        margin: auto;
+    }
+    img.countryFlag {
+        height: 110px;        
     }
 }
 

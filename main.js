@@ -221,9 +221,9 @@ async function getMapsData(cty) {
     results.forEach(country => {
       //  console.log(country)
         const {name, population, region, capital, flag} = country
-      //  console.log(name, flag)
+      // console.log(name, flag)
       if (cty == name) {
-          console.log(region);
+          console.log(flag);
           console.log(name, capital);
           regionContinent.innerHTML = `Region : ${region}`;
           capitalCity.innerHTML = `Capital : ${capital}`;
