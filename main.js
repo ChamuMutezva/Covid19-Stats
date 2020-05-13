@@ -16,17 +16,6 @@ mythLink.addEventListener("click" , () => {
 })
 */
 
-/*map data
-async function getMapsData() {
-    const response = await fetch('https://restcountries.eu/rest/v2/all');
-    const results = await response.json();
-    const  [flag , region , name] = results;
-    console.log(results)
-}
-
-getMapsData();
-*/
-
 
 console.log(modalMyth);
 
@@ -80,15 +69,16 @@ async function covidData() {
         // console.log(timeToday);
         let countryHolder = document.querySelector(".countryState");
 
-        // restcountries map details - start 
+        /* restcountries map details - start 
         const responseMap = await fetch('https://restcountries.eu/rest/v2/all'); //fetch map
         const resultsMap = await responseMap.json(); //get map data
         
         resultsMap.forEach(country => {
             console.log(country)
             const {name, population, region, capital, flag} = country
-           // console.log(name, flag)
-        })      
+            console.log(name, flag)
+        }) */
+         //restcountries map details - end  
         
         Countries.forEach(country => {
             const divCountry = document.createElement("div");
@@ -159,7 +149,9 @@ async function covidData() {
 
             })
 
-        });
+        }); //covid19 api
+
+    
 
         const newConfirmed = document.querySelector(".newConfirmed");
         const newDeath = document.querySelector(".newDeath");
@@ -178,6 +170,9 @@ async function covidData() {
         totalRecovered.innerHTML = Global.TotalRecovered.toLocaleString();
         console.log(dateToday)
         dateLabel.innerHTML = `Data captured at: ${dateToday}  ${timeToday}`;
+
+   
+
     } catch (err) {
         const dateLabel = document.querySelector(".dateTaken");
         dateLabel.classList.add("dataError");
@@ -208,3 +203,17 @@ async function testData() {
     console.log(results)
 }
 testData() */
+
+//map data
+async function getMapsData() {
+    const response = await fetch('https://restcountries.eu/rest/v2/all');
+    const results = await response.json();
+    results.forEach(country => {
+        console.log(country)
+        const {name, population, region, capital, flag} = country
+        console.log(name, flag)
+    }) 
+}
+
+getMapsData();
+
