@@ -66,17 +66,10 @@ menuClose.addEventListener("click", () => {
 async function covidData() {
     try {
         const response = await fetch('https://api.covid19api.com/summary');
-
-        // restcountries map details - start 
-        const responseMap = await fetch('https://restcountries.eu/rest/v2/all'); //fetch map
-        const resultsMap = await responseMap.json(); //get map data
-        const [name, flag] = resultsMap;
-        console.log(name);
-
-
         const results = await response.json();
         const { Global, Countries } = results;
         console.log(Countries);
+
         const timeExtracted = Countries[0].Date;
         // console.log(timeExtracted)
         const currentDateTime = timeExtracted.split("T");
@@ -87,7 +80,16 @@ async function covidData() {
         // console.log(timeToday);
         let countryHolder = document.querySelector(".countryState");
 
-
+        // restcountries map details - start 
+        const responseMap = await fetch('https://restcountries.eu/rest/v2/all'); //fetch map
+        const resultsMap = await responseMap.json(); //get map data
+        
+        resultsMap.forEach(country => {
+            console.log(country)
+            const {name, population, region, capital, flag} = country
+           // console.log(name, flag)
+        })      
+        
         Countries.forEach(country => {
             const divCountry = document.createElement("div");
 
