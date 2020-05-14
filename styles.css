@@ -212,14 +212,14 @@ details[open] ~ * {
 .countryFacts {
     display: flex;
 }
-.countryFacts1 {
+/*.countryFacts1 {
     text-align: left;
-}
+}*/
 .countryFacts1 h1{
     text-align: left;
 }
 img.countryFlag {
-    height: 70px;
+    width: min(220px, 60%);
     display: block;
     margin: auto;
 }
@@ -270,11 +270,23 @@ img.countryFlag {
     .description {
         width: 60%;       
     }
+    .modalCountry {        
+        top: 10px;       
+        width: 90%;       
+        left: 5%;        
+    }
     .countryFacts {       
         flex-direction: column;
         width: 60%;
     }
+    .countryFacts1 {
+        text-align: center;
+    }
+    .countryFacts1 h1 {
+        text-align: center;
+    }
     .caseStatistics {
+        width: 50%;
         margin: auto;
     }
     img.countryFlag {

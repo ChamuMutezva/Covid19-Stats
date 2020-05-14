@@ -15178,11 +15178,11 @@ section {
 
 .modalCountry {
   position: absolute;
-  top: 50px;
+  top: 5px;
   visibility: hidden;
-  width: 80%;
+  width: 100%;
   margin: auto;
-  left: 10%;
+  left: 0%;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -15211,16 +15211,16 @@ details[open] ~ * {
   display: flex;
 }
 
-.countryFacts1 {
-  text-align: left;
-}
+/*.countryFacts1 {
+    text-align: left;
+}*/
 
 .countryFacts1 h1{
   text-align: left;
 }
 
 img.countryFlag {
-  height: 70px;
+  width: min(220px, 60%);
   display: block;
   margin: auto;
 }
@@ -15281,12 +15281,32 @@ img.countryFlag {
     width: 60%;
   }
 
+  .modalCountry {
+    top: 10px;
+    width: 90%;
+    left: 5%;
+  }
+
   .countryFacts {
     flex-direction: column;
+    width: 60%;
+  }
+
+  .countryFacts1 {
+    text-align: center;
+  }
+
+  .countryFacts1 h1 {
+    text-align: center;
   }
 
   .caseStatistics {
+    width: 50%;
     margin: auto;
+  }
+
+  img.countryFlag {
+    height: 110px;
   }
 }
 
