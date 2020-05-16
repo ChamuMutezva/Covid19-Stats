@@ -216,7 +216,7 @@ async function getMapsData(cty) {
     const response = await fetch('https://restcountries.eu/rest/v2/all');
     const results = await response.json();
     const modalCountryOpen = document.querySelector(".modalCountryOpen");
-    const countryFlag = document.querySelector(".countryFlag")
+    //const countryFlag = document.querySelector(".countryFlag")
     console.log(modalCountryOpen)
     results.forEach(country => {
       //  console.log(country)
@@ -228,7 +228,7 @@ async function getMapsData(cty) {
           regionContinent.innerHTML = `Region : ${region}`;
           capitalCity.innerHTML = `Capital : ${capital}`;
           countryPopulation.innerHTML = `Population : ${population.toLocaleString()}`
-          countryFlag.src = `${flag}`;
+         // countryFlag.src = `${flag}`;
       }
     }) 
 }

@@ -14985,8 +14985,8 @@ h1, h3 {
 }
 
 h1:hover {
-  -webkit-animation: bounce;
-          animation: bounce;
+  -webkit-animation: slideOutRight;
+          animation: slideOutRight;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
@@ -15207,18 +15207,6 @@ details[open] ~ * {
           animation-duration: 2s;
 }
 
-.countryFacts {
-  display: flex;
-}
-
-/*.countryFacts1 {
-    text-align: left;
-}*/
-
-.countryFacts1 h1{
-  text-align: left;
-}
-
 img.countryFlag {
   width: min(220px, 60%);
   display: block;
@@ -15287,17 +15275,10 @@ img.countryFlag {
     left: 5%;
   }
 
-  .countryFacts {
-    flex-direction: column;
-    width: 60%;
-  }
-
   .countryFacts1 {
-    text-align: center;
-  }
-
-  .countryFacts1 h1 {
-    text-align: center;
+    width: 50%;
+    align-self
+        : center;
   }
 
   .caseStatistics {

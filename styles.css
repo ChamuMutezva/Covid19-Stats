@@ -19,7 +19,7 @@ h1, h3 {
     text-align: center;
 }
 h1:hover {
-    animation: bounce;
+    animation: slideOutRight;
     animation-duration: 2s;
 }
 header {
@@ -209,15 +209,6 @@ details[open] ~ * {
   animation-duration: 2s;
 }
 
-.countryFacts {
-    display: flex;
-}
-/*.countryFacts1 {
-    text-align: left;
-}*/
-.countryFacts1 h1{
-    text-align: left;
-}
 img.countryFlag {
     width: min(220px, 60%);
     display: block;
@@ -274,17 +265,12 @@ img.countryFlag {
         top: 10px;       
         width: 90%;       
         left: 5%;        
-    }
-    .countryFacts {       
-        flex-direction: column;
-        width: 60%;
-    }
+    }   
     .countryFacts1 {
-        text-align: center;
-    }
-    .countryFacts1 h1 {
-        text-align: center;
-    }
+        width: 50%;
+        align-self
+        : center;
+    }   
     .caseStatistics {
         width: 50%;
         margin: auto;
