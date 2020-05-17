@@ -15215,7 +15215,7 @@ img.countryFlag {
 
 @media screen and (min-width: 580px) {
   .shareOnWeb {
-    visibility: hidden;
+    display: none;
   }
 
   .modal ul {
@@ -15223,12 +15223,13 @@ img.countryFlag {
     flex-direction: row;
     /* padding: 8px 0;*/
     margin-top: 18px;
-    margin-left: 100px;
+    margin-left: 20%;
     background-color: transparent;
   }
 
   .modal {
     visibility: visible;
+    width: 100%;
   }
 
   .menu {

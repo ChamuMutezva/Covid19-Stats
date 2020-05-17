@@ -224,11 +224,12 @@ img.countryFlag {
         flex-direction: row;
        /* padding: 8px 0;*/
         margin-top: 18px;
-        margin-left: 100px;
+        margin-left: 20%;
     background-color: transparent;
     }
     .modal {
         visibility: visible;
+        width: 100%;
     }
     .menu {
         visibility: hidden;
