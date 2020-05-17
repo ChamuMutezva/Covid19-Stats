@@ -14997,6 +14997,10 @@ header {
   z-index: 3;
 }
 
+.shareOnWeb {
+  /* display: inline-block; */
+}
+
 .dataWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

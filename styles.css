@@ -28,7 +28,7 @@ header {
     z-index: 3;
 }
 .shareOnWeb {
-    display: inline-block;
+   /* display: inline-block; */
 }
 .dataWrapper {
     display: grid;
