@@ -15214,6 +15214,10 @@ img.countryFlag {
 }
 
 @media screen and (min-width: 580px) {
+  .shareOnWeb {
+    visibility: hidden;
+  }
+
   .modal ul {
     justify-content: space-around;
     flex-direction: row;

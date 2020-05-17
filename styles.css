@@ -216,6 +216,9 @@ img.countryFlag {
 }
 
 @media screen and (min-width: 580px) {
+    .shareOnWeb {
+        display: none;
+    }
     .modal ul {
         justify-content: space-around;
         flex-direction: row;
