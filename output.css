@@ -15205,10 +15205,10 @@ section {
 /*summary animation */
 
 details[open] ~ * {
-  -webkit-animation: fadeIn;
-          animation: fadeIn;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation: fadeInLeft;
+          animation: fadeInLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 img.countryFlag {

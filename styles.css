@@ -208,7 +208,7 @@ top: -40px;
 
 /*summary animation */
 details[open] ~ * {
-  animation: fadeIn;
+  animation: fadeInLeft;
   animation-duration: 2s;
 }
 
