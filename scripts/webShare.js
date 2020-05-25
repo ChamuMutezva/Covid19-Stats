@@ -15,7 +15,7 @@ const share = document.querySelector('.share-button');
                 .then(() => console.log('Successful share'))
                 .catch((error) => console.log('Error sharing', error));
         } else {
-            console.log(`Web share not supported on desktop...`);
+           // console.log(`Web share not supported on desktop...`);
             alert(`Web share not supported on desktop...`);
         }
     })
