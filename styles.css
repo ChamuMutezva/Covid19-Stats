@@ -51,8 +51,14 @@ main {
     justify-content: space-between;
     padding: 24px;
 }
+.navMenu img:hover {
+    animation: rotateOut 1s;
+}
 .menuToggle {
     visibility: hidden; 
+}
+.modalAnimation {
+    animation: fadeInLeft 1s;
 }
 .menu {
     position: relative;

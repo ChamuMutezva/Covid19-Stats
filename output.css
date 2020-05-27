@@ -15025,8 +15025,18 @@ main {
   padding: 24px;
 }
 
+.navMenu img:hover {
+  -webkit-animation: rotateOut 1s;
+          animation: rotateOut 1s;
+}
+
 .menuToggle {
   visibility: hidden;
+}
+
+.modalAnimation {
+  -webkit-animation: fadeInLeft 1s;
+          animation: fadeInLeft 1s;
 }
 
 .menu {
@@ -15207,8 +15217,8 @@ section {
 details[open] ~ * {
   -webkit-animation: fadeInLeft;
           animation: fadeInLeft;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 img.countryFlag {

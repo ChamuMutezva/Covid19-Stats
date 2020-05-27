@@ -43,12 +43,14 @@ menuOpen.addEventListener("click", () => {
     menuClose.classList.toggle("menuToggle");
     menuOpen.classList.toggle("menuToggle");
     modal.classList.toggle("menuToggle");
+    modal.classList.toggle("modalAnimation");
 })
 
 menuClose.addEventListener("click", () => {
     menuClose.classList.toggle("menuToggle");
     menuOpen.classList.toggle("menuToggle");
     modal.classList.toggle("menuToggle");
+    modal.classList.toggle("modalAnimation");
 })
 //function to fetch data from the Covid19 Api
 //Data is dynamic and is subject to change as new data come in
