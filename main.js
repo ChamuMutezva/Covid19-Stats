@@ -18,7 +18,6 @@ mythLink.addEventListener("click" , () => {
 
 
 console.log(modalMyth);
-
 //filter search by country
 searchCountry.addEventListener("keyup", (event) => {
     const allCountries = Array.from(document.querySelectorAll(".countryName"));
