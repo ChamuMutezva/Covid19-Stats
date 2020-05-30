@@ -15028,6 +15028,8 @@ main {
 .navMenu img:hover {
   -webkit-animation: rotateOut 1s;
           animation: rotateOut 1s;
+  border-radius: 50%;
+  background: red;
 }
 
 .menuToggle {
