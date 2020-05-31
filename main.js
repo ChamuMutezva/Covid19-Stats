@@ -191,7 +191,7 @@ const btnModal = document.querySelector(".modalCountry button");
 console.log(btnModal)
 btnModal.addEventListener("click", () => {
     const modalCountry = document.querySelector(".modalCountry");
-    modalCountry.focus(true);
+  //  modalCountry.focus();
     body.style.overflow = "visible";
     modalCountry.classList.remove("modalCountryOpen");
     // modalCountry.classList.add('animate__animated', 'animate__fadeOut');
