@@ -15212,6 +15212,10 @@ section {
           animation-duration: 2s;
 }
 
+video {
+  width: min(250px, 50%);
+}
+
 /* end about page styling */
 
 /*summary animation */
