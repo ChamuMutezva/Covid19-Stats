@@ -8,6 +8,7 @@
 }
 a {
     cursor: pointer;
+    user-select: none;
 }
 body {
     font-family: 'Muli', sans-serif;
