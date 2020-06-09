@@ -15177,7 +15177,8 @@ section {
 }
 
 .dataError {
-  color: red;
+  color: #513636;
+  font-weight: 900;
 }
 
 .btnTop {
