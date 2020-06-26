@@ -232,7 +232,7 @@ details[open] ~ * {
 img.countryFlag {
     width: min(220px, 60%);
     display: block;
-    margin: auto;
+    margin: 15px auto;
 }
 
 @media screen and (min-width: 580px) {
