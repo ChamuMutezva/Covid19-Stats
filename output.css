@@ -15005,6 +15005,11 @@ header {
   /* display: inline-block; */
 }
 
+.countryFacts1 {
+  width: 340px;
+  margin: auto;
+}
+
 .dataWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -15235,7 +15240,7 @@ details[open] ~ * {
 img.countryFlag {
   width: min(220px, 60%);
   display: block;
-  margin: auto;
+  margin: 15px auto;
 }
 
 @media screen and (min-width: 580px) {
