@@ -234,6 +234,13 @@ img.countryFlag {
     display: block;
     margin: 15px auto;
 }
+/* demo.html*/
+
+figcaption {
+    width: 50%;
+    text-align: center;
+    margin: 25px auto;
+}
 
 @media screen and (min-width: 580px) {
     .shareOnWeb {
@@ -302,5 +309,21 @@ img.countryFlag {
     img.countryFlag {
         height: 110px;        
     }
+    /*demo.html */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .maskDistance {
+        grid-area: 2/1/2/3;        
+    }
+    .maskDistance img {
+        margin: auto;
+    }
+    .masks {
+        display: flex;
+        align-items: center;        
+    }
+
 }
 
