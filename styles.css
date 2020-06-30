@@ -236,10 +236,16 @@ img.countryFlag {
 }
 /* demo.html*/
 
-figcaption {
-    width: 50%;
+figcaption {    
     text-align: center;
     margin: 25px auto;
+}
+.masks {
+   
+    width: min(300px, 90%);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 @media screen and (min-width: 580px) {
