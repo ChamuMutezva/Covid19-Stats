@@ -15343,21 +15343,25 @@ figcaption {
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .maskDistance {
-    grid-area: 2/1/2/3;
+    /* grid-area: 1/2/3/3;  */
   }
 
   .maskDistance img {
     margin: auto;
   }
 
-  .masks {
+  .masksFacts {
     display: flex;
     align-items: center;
+    width: 60%;
   }
+}
+
+@media screen and (min-width: 1440px) {
 }
 
 @media (min-width: 640px) {

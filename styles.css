@@ -317,19 +317,25 @@ figcaption {
     }
     /*demo.html */
     .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .maskDistance {
-        grid-area: 2/1/2/3;        
+       /* grid-area: 1/2/3/3;  */      
     }
     .maskDistance img {
         margin: auto;
     }
-    .masks {
+    .maskFacts {
         display: flex;
-        align-items: center;        
+        align-items: center;  
+        width: 60%;      
     }
 
+}
+
+@media screen and (min-width: 1440px) {
+   
 }
 
