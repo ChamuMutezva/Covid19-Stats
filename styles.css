@@ -239,13 +239,22 @@ img.countryFlag {
 figcaption {    
     text-align: center;
     margin: 25px auto;
+    
 }
-.masks {
-   
+
+.maskFacts img {    
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 4px #565a93;
+}
+.maskFacts {   
     width: min(300px, 90%);
     margin: 10px auto;
     padding: 10px;
     border-radius: 10px;
+}
+video {
+    padding: 10px;
+    box-shadow: inset 0px 0px 2px 10px #142031;
 }
 
 @media screen and (min-width: 580px) {
@@ -321,16 +330,20 @@ figcaption {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .maskDistance {
-       /* grid-area: 1/2/3/3;  */      
+    figcaption {
+       width: 50%;    
     }
-    .maskDistance img {
+    .maskFacts img {
         margin: auto;
+        padding: 10px;
     }
     .maskFacts {
         display: flex;
-        align-items: center;  
-        width: 60%;      
+        align-items: center;    
+        width: 100%;      
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 10px;
     }
 
 }
