@@ -15198,6 +15198,16 @@ section {
   margin: auto;
 }
 
+.facts {
+  background: #0b0e2f;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.caseStatistics p {
+  margin: 15px auto;
+}
+
 .description p {
   padding-left: 30px;
 }
@@ -15340,13 +15350,17 @@ video {
         : center;
   }
 
+  .aboutCountry {
+    width: 45%;
+  }
+
   .caseStatistics {
-    width: 50%;
+    width: 45%;
     margin: auto;
   }
 
   img.countryFlag {
-    height: 110px;
+    /* height: 110px;  */
   }
 
   /*demo.html */
