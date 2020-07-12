@@ -20,8 +20,8 @@ h1, h3 {
     text-align: center;
 }
 h1:hover {
-    animation: slideOutRight;
-    animation-duration: 2s;
+    animation: flip;
+    animation-duration: 1s;
 }
 header {
     position: fixed;

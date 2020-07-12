@@ -14989,10 +14989,10 @@ h1, h3 {
 }
 
 h1:hover {
-  -webkit-animation: slideOutRight;
-          animation: slideOutRight;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation: flip;
+          animation: flip;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 header {
