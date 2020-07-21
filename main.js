@@ -122,7 +122,7 @@ async function covidData() {
                 countryName.innerHTML = `${country.Country}`
                 console.log(modalCountry)
                 modalCountry.classList.add("modalCountryOpen");
-                body.style.overflow = "hidden"
+              //  body.style.overflow = "hidden"
                 //  body.classList.add(".toggleOverflow");
                 console.log(`button clicked is ${country.Country}`);
                 //alert(`${country.Country} information will 

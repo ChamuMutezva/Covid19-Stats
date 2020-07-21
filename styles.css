@@ -222,6 +222,10 @@ top: -40px;
     flex-direction: column;
     row-gap: 30px;
 }
+summary {
+    animation: fadeIn;
+    animation-duration: 2s;
+}
 
 .modalCountryOpen {
     visibility: visible;
