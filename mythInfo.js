@@ -1,4 +1,4 @@
-console.log("mythinfomation")
+const modalMyth = document.querySelector(".modalMyth")
 const myData = [
     {
         "id": 1,
@@ -46,5 +46,14 @@ const myData = [
 ]
 
 myData.map(item => {
-    console.log(item.fact)
+    console.log(modalMyth)
+    const div = document.createElement("div")
+   
+    const template =
+    `<div class="card cardMyth">
+        <h3>${item.fact}</h3>
+        <p>${item.alt}</p>
+    </div>`
+    div.innerHTML = template
+    modalMyth.appendChild(div)
 })
