@@ -48,12 +48,13 @@ const myData = [
 myData.map(item => {
     console.log(modalMyth)
     const div = document.createElement("div")
+    div.classList.add("description")
    
     const template =
-    `<div class="card cardMyth">
-        <h3>${item.fact}</h3>
-        <p>${item.alt}</p>
-    </div>`
+    `<details class="details">
+        <summary class="m-4">${item.fact}</summary>
+        <p class="mt-12">${item.alt}</p>
+    </details>`
     div.innerHTML = template
     modalMyth.appendChild(div)
 })

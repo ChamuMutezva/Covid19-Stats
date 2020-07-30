@@ -15020,6 +15020,25 @@ header {
   margin: auto;
 }
 
+.cardMyth {
+  width: 340px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: aquamarine;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.cardMyth h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 10px auto;
+}
+
+.cardMyth p {
+  padding: 10px;
+}
+
 main {
   position: relative;
   top: 90px;
