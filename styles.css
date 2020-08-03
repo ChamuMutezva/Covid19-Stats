@@ -247,6 +247,8 @@ summary {
     visibility: visible;
     animation: fadeIn;
     animation-duration: 2s;
+    max-height: calc(100vh - 15px);
+    overflow-y: auto;
 }
 video {
     width: max(250px, 50%);

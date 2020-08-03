@@ -15020,24 +15020,22 @@ header {
   margin: auto;
 }
 
-.cardMyth {
-  width: 340px;
-  margin: 20px auto;
-  padding: 15px;
-  background-color: aquamarine;
-  text-align: center;
-  border-radius: 10px;
+/*.cardMyth {
+    width: 340px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 10px;
 }
-
 .cardMyth h3 {
-  font-size: 1rem;
-  font-weight: 800;
-  margin: 10px auto;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 10px auto;
 }
-
 .cardMyth p {
-  padding: 10px;
-}
+    padding: 10px;
+}*/
 
 main {
   position: relative;
@@ -15190,15 +15188,17 @@ section {
   top: -40px;
 }
 
-.modalMyth{
-  display: flex;
-  flex-wrap: wrap;
+/*.modalMyth{
+    display: flex;
+    flex-wrap: wrap;    
 }
 
 .modalMyth img {
-  width: 340px;
-  margin: 20px auto;
-}
+    
+        width: 340px;
+        margin: 20px auto;       
+    
+}*/
 
 .dataError {
   color: #513636;
@@ -15256,6 +15256,8 @@ summary {
           animation: fadeIn;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  max-height: calc(100vh - 15px);
+  overflow-y: auto;
 }
 
 video {
