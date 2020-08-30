@@ -1,6 +1,7 @@
 # Covid19-Stats
 ## live-preview link
  https://chamumutezva.github.io/Covid19-Stats/.
+ Firebase link - https://covid19-stats-5c517.web.app
 
 Live preview information using an api which is daily updated.
 
