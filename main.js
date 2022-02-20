@@ -215,22 +215,24 @@ async function getMapsData(cty) {
     const capitalCity = document.querySelector(".capitalCity");
     const countryPopulation = document.querySelector(".countryPopulation");
     console.log(cty);
-    const response = await fetch('https://restcountries.eu/rest/v2/all');
+    //const response = await fetch('https://restcountries.eu/rest/v2/all');
+    const response = await fetch('https://restcountries.com/v3.1/all');
     const results = await response.json();
+    console.log(results)
     const modalCountryOpen = document.querySelector(".modalCountryOpen");
     const countryFlag = document.querySelector(".countryFlag")
     console.log(modalCountryOpen)
     results.forEach(country => {
       //  console.log(country)
-        const {name, population, region, capital, flag} = country
+        const {name, population, region, capital, flags} = country
       // console.log(name, flag)
-      if (cty == name) {
-          console.log(flag);
+      if (cty == name.common) {
+          console.log(flags.svg);
           console.log(name, capital);
           regionContinent.innerHTML = `Region : ${region}`;
           capitalCity.innerHTML = `Capital : ${capital}`;
           countryPopulation.innerHTML = `Population : ${population.toLocaleString()}`
-          countryFlag.src = `${flag}`;
+          countryFlag.src = `${flags.svg}`;
       }
     }) 
 }
